@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { Sora } from "@next/font/google";
 import { Nav } from "./Nav";
 import { Header } from "./Header";
+import { TopLeftImg } from "./TopLeftImg";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -15,9 +16,13 @@ interface Props {
 
 export const Layout: FC<Props> = ({ children }) => {
   return (
-    <div>
+    <div
+      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
+    >
+      <TopLeftImg />
       <Nav />
       <Header />
+      {children}
     </div>
   );
 };
