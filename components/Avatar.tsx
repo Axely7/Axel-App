@@ -3,13 +3,13 @@ import React from "react";
 
 export const Avatar = () => {
   return (
-    <div className="hidden xl:flex xl:max-w-none">
+    <div className="sm:hidden xl:flex xl:justify-center xl:mt-60">
       <Image
-        src={"/avatar.png"}
-        width={737}
-        height={678}
+        src={"/logo.png"}
+        width={220}
+        height={40}
         alt=""
-        className="opacity-20 translate-z-0 w-full h-full"
+        className="bg-opacity-100 translate-z-0 rounded-xl h-64 w-64"
       />
     </div>
   );
