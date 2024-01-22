@@ -18,8 +18,8 @@ export default function Home() {
             exit={"hidden"}
             className="h1"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-blue-600">Digital Reality</span>
+            Creating <br />{" "}
+            <span className="text-blue-600">Digital Products</span>
           </motion.h1>
           <motion.p
             variants={fadeIn("down", 0.3)}
@@ -28,10 +28,12 @@ export default function Home() {
             exit={"hidden"}
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            In laborum eiusmod exercitation aute. Reprehenderit ullamco pariatur
-            consequat adipisicing reprehenderit irure aliqua et est ullamco.
-            Exercitation et eu in consectetur laboris ut velit dolor in ipsum
-            irure occaecat proident.
+            Hi, I&apos;m a Front End Developer committed to delivering top-notch
+            services and user experiences. I have a diverse portfolio, including
+            mobile applications (iOS and android), web applications, websites.{" "}
+            <br />
+            If you&apos;re interested, feel free to check out my work and
+            contact me for collaborations or inquiries.
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />

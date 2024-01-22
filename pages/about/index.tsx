@@ -2,21 +2,10 @@ import { Avatar } from "@/components/Avatar";
 import { Circle } from "@/components/Circle";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3, FaReact, FaFigma, FaAws } from "react-icons/fa";
+import { BiLogoTypescript } from "react-icons/bi";
 
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-} from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiFlutter } from "react-icons/si";
 import { fadeIn } from "../../variants";
 import CountUp from "react-countup";
 
@@ -27,35 +16,29 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 key={""} />,
-          <FaCss3 key={""} />,
-          <FaJs key={""} />,
-          <FaReact key={""} />,
-          <SiNextdotjs key={""} />,
-          <SiFramer key={""} />,
-          <FaWordpress key={""} />,
+          <FaHtml5 key={"HTML"} />,
+          <FaCss3 key={"CSS"} />,
+          <BiLogoTypescript key={"TypeScript"} />,
+          <FaReact key={"React"} />,
+          <SiNextdotjs key={"NextJS"} />,
+          <SiTailwindcss key={"Tailwind"} />,
         ],
+      },
+      {
+        title: "Mobile Development",
+        icons: [
+          <BiLogoTypescript key={"TypeScript"} />,
+          <FaReact key={"React Native"} />,
+          <SiFlutter key={"Flutter"} />,
+        ],
+      },
+      {
+        title: "Cloud",
+        icons: [<FaAws key={"AWS"} />],
       },
       {
         title: "UI/UX Design",
-        icons: [
-          <FaFigma key={""} />,
-          <SiAdobexd key={""} />,
-          <SiAdobephotoshop key={""} />,
-        ],
-      },
-    ],
-  },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        icons: [<FaFigma key={"Figma"} />],
       },
     ],
   },
@@ -63,16 +46,12 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Full Stack Developer - Akibot",
+        stage: "2018 - 2022",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Front End Developer - SARCAN",
+        stage: "2022 - Today",
       },
     ],
   },
@@ -80,16 +59,8 @@ const aboutData = [
     title: "credentials",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "B.S in Mechatronic Engineering - UNAM",
+        stage: "2022",
       },
     ],
   },
@@ -99,7 +70,7 @@ const AboutPage = () => {
   const [index, setIndex] = useState<number>(0);
 
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full overflow-y-scroll bg-primary/30 py-32 text-center xl:text-left">
       <Circle />
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
@@ -111,19 +82,25 @@ const AboutPage = () => {
             exit={"hidden"}
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Get to know <span className="text-accent">me.</span>
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
             exit={"hidden"}
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-justify"
           >
-            10 years ago, I began freelancing as a developer. Since then,
-            I&apos;ve done remote work for agencies, consulted for startups, and
-            collaborated on digital products for bussiness and consumer use.
+            I'm passionate about technology and strongly believe that it is akin
+            to real-world magic, which is why I fell in love with creating
+            digital products. My goal is to empower users and customers to
+            achieve their goals and desires. I not only focus on building
+            digital tools that exceed functional expectations but also
+            prioritize integrating beautiful designs in our tools, applications,
+            and websites. My expertise lies in backend development, including
+            API endpoints, websockets, and serverless solutions with AWS, as
+            well as frontend development for mobile apps (iOS and Android), full
+            web applications, and websites.
           </motion.p>
           <motion.div
             variants={fadeIn("right", 0.6)}
@@ -133,38 +110,38 @@ const AboutPage = () => {
             className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
           >
             <div className="flex flex-1 xl:gap-x-6">
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              <div className="relative flex-1 after:w-[1px] after:h-full after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={4} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience
                 </div>
               </div>
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={250} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients
                 </div>
-              </div>
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              </div> */}
+              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={650} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished projects
                 </div>
-              </div>
-              <div className="relative flex-1">
+              </div> */}
+              {/* <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={8} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Winning awards
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
@@ -207,9 +184,13 @@ const AboutPage = () => {
                           return (
                             <div
                               key={itemIndex}
-                              className="text-2xl text-white"
+                              className=" text-white"
+                              title={icon.key as string}
                             >
-                              {icon}
+                              <div className="flex justify-center text-2xl">
+                                {icon}
+                              </div>
+                              <p className="text-sm mt-1"> {icon.key}</p>
                             </div>
                           );
                         })
